@@ -6,21 +6,11 @@ const HomePage = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <TouchableOpacity onPress={() => navigation.openDrawer()}>
+        <TouchableOpacity >
           <Icon name="menu" size={30} color="#fff" />
         </TouchableOpacity>
         <Text style={styles.title}>Emergency Alert App</Text>
       </View>
-
-    {/* <View style={styles.icoons}>
-    <Icon name="home" size={30} color="#000" />
-      <Icon name="my-location" size={30} color="#000" />
-      <Icon name="phone" size={30} color="#d32f2f" />
-      <TouchableOpacity>
-        <Icon name="menu" size={30} />
-      </TouchableOpacity >
-    </View> */}
-
 
       <View style={styles.content}>
         <Text style={styles.infoText}>
@@ -29,7 +19,7 @@ const HomePage = ({ navigation }) => {
 
         <Button title="Emergency Alert" onPress={() => alert('Emergency Alert Sent!')} color="#ff6347" />
         
-        <TouchableOpacity style={styles.settingsButton} onPress={() => navigation.navigate('Settings')}>
+        <TouchableOpacity style={styles.settingsButton} >
           <Text style={styles.settingsText}>Settings</Text>
         </TouchableOpacity>
         
@@ -40,19 +30,18 @@ const HomePage = ({ navigation }) => {
         
         <View style={styles.contacts}>
           <Text style={styles.contactsTitle}>Emergency Contacts</Text>
-          <Text>John Doe: 123-456-7890</Text>
-          <Text>Jane Smith: 098-765-4321</Text>
+          <Text>Father: 123-456-7890</Text>
+          <Text>Mother: 098-765-4321</Text>
         </View>
       </View>
       
       <View style={styles.footer}>
-        <TouchableOpacity onPress={() => navigation.navigate('Help')}>
+        <TouchableOpacity >
           <Text style={styles.footerText}>Help & Support</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('Logout')}>
+        <TouchableOpacity >
           <Text style={styles.footerText}>Logout</Text>
         </TouchableOpacity>
-      
       </View>
     </View>
   );
@@ -63,18 +52,8 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-between',
     backgroundColor: '#f0f8ff',
-    marginTop:40,
+    marginTop: 40,
   },
-  icoons: {
-    flex: 1,
-    justifyContent: 'space-between',
-    backgroundColor:"coral",
-    // marginTop:50,
-    height:10,
-    flexDirection:"row",
-    padding: 20,
-  },
-
   header: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -90,6 +69,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    padding: 20,
   },
   infoText: {
     fontSize: 16,
@@ -110,20 +90,30 @@ const styles = StyleSheet.create({
   alerts: {
     marginTop: 20,
     alignItems: 'center',
+    width: '100%',
+    padding: 10,
+    backgroundColor: '#f0f8ff',
+    borderRadius: 5,
   },
   alertsTitle: {
     fontSize: 18,
     fontWeight: 'bold',
     color: '#4682b4',
+    marginBottom: 5,
   },
   contacts: {
     marginTop: 20,
     alignItems: 'center',
+    width: '100%',
+    padding: 10,
+    backgroundColor: '#f0f8ff',
+    borderRadius: 5,
   },
   contactsTitle: {
     fontSize: 18,
     fontWeight: 'bold',
     color: '#4682b4',
+    marginBottom: 5,
   },
   footer: {
     flexDirection: 'row',
@@ -138,4 +128,3 @@ const styles = StyleSheet.create({
 });
 
 export default HomePage;
-
