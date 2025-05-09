@@ -1,5 +1,4 @@
 import {StyleSheet} from "react-native";
-
 export default ExStyles=StyleSheet.create({
 
     imgSec:{
@@ -21,6 +20,7 @@ export default ExStyles=StyleSheet.create({
       fontSize:25,
       textAlign:"center",
       backgroundColor:"#52b788",
+      fontFamily:"sanserif",
       height:50,
       marginTop:2,
       color:"white",
@@ -37,7 +37,7 @@ export default ExStyles=StyleSheet.create({
 
     btn:{
       backgroundColor:"#2196F3",
-      width:"38%",
+      width:"32%",
       height:40,
       borderRadius:8,
       display:"flex",
@@ -46,7 +46,8 @@ export default ExStyles=StyleSheet.create({
 
     },
     button:{
-      fontSize:25,
+      fontFamily:"sanserif",
+      fontSize:23,
       color:"white",
       textAlign:"center",
 
